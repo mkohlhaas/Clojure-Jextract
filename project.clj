@@ -6,6 +6,7 @@
   :java-source-paths ["src/org"]
   :dependencies [[org.clojure/clojure "1.11.1"]]
   :jvm-opts ["--enable-native-access=ALL-UNNAMED"]
+  ;; Not needed:
   ;; :aot [org.unix]
-  :javac-options ["--source=25"]
+  ;; :javac-options ["--source=25"]
   :repl-options {:init-ns f.core})
