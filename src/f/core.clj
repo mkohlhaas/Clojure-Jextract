@@ -1,7 +1,7 @@
 (ns f.core
-  (:import [java.lang.foreign Arena]
-           [org.unix          tm]
-           [org.unix          time_h]))
+  (:import
+   [java.lang.foreign Arena]
+   [org.unix time_h tm]))
 
 (let [arena (Arena/ofConfined)
       now   (.allocateFrom arena time_h/C_LONG (long (/ (System/currentTimeMillis) 1000)))
